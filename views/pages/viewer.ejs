@@ -1,0 +1,66 @@
+<!-- views/pages/viewer.ejs -->
+
+<html>
+  <head>
+    <% include ../components/head %>
+  </head>
+  <body>
+    <h1>
+      Little Hex Viewer
+    </h1>
+    <br>
+    <table style="float: left; margin-bottom: 30pt">
+      <tr>
+        <th>&nbsp;00&nbsp;</th>
+        <th>&nbsp;01&nbsp;</th>
+        <th>&nbsp;02&nbsp;</th>
+        <th>&nbsp;03&nbsp;</th>
+        <th>&nbsp;04&nbsp;</th>
+        <th>&nbsp;05&nbsp;</th>
+        <th>&nbsp;06&nbsp;</th>
+        <th>&nbsp;07&nbsp;</th>
+        <th>&nbsp;08&nbsp;</th>
+        <th>&nbsp;09&nbsp;</th>
+        <th>&nbsp;0A&nbsp;</th>
+        <th>&nbsp;0B&nbsp;</th>
+        <th>&nbsp;0C&nbsp;</th>
+        <th>&nbsp;0D&nbsp;</th>
+        <th>&nbsp;0E&nbsp;</th>
+        <th>&nbsp;0F&nbsp;</th>
+      <% for (var h = 0; h < hexValues.length; h++) { %>
+      <% if (((h/16)%1== 0)) { %>
+      </tr>
+      <tr>
+        <td>
+          <center>
+          <%= hexValues[h] %>
+          </center>
+        </td>
+      <% } else { %>
+      <td>
+        <center>
+        <%= hexValues[h] %>
+        </center>
+      </td>
+      <% } %>
+      <% } %>
+    </table>
+    <table style="float: left; margin-left: 20pt">
+      <tr>
+        <th style="color: rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0)">&#8203;</th>
+      <% for (var c = 0; c < charValues.length; c++) { %>
+      <% if (((c/16)%1== 0)) { %>
+      </tr>
+      <tr>
+        <td>
+          <%= charValues[c] %>
+        </td>
+      <% } else { %>
+      <td>
+        <%= charValues[c] %>
+      </td>
+      <% } %>
+      <% } %>
+    </table>
+  </body>
+</html>

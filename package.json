@@ -1,0 +1,23 @@
+{
+  "name": "little-hex-viewer",
+  "version": "1.0.0",
+  "description": "A tiny hex viewer, that runs in your browser.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/larsaugustin/little-hex-viewer.git"
+  }
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "ejs": "^2.7.1",
+    "stylus": "^0.54.7",
+    "nib": "^1.1.2",
+    "express-fileupload": "^1.1.5"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
