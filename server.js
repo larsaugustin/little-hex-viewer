@@ -27,7 +27,7 @@ app.use(
 );
 app.use(express.static(__dirname + "/public"));
 
-// rendering /
+// rendering
 app.get("/", function(request, response) {
   response.render("pages/index");
 });
